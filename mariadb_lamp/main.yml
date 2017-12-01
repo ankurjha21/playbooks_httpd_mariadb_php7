@@ -17,4 +17,4 @@
         password: 'root@1234'
         priv: "myotherdb.*:ALL"
   roles:
-    - ansible-role-mariadb
+    - mariadb
