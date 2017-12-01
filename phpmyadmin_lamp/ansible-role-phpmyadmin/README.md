@@ -1,4 +1,4 @@
-Nainterceptor.phpmyadmin
+Ankur.phpmyadmin
 ====================
 
 Role used to install PhpMyAdmin on CentOS with yum
@@ -16,9 +16,10 @@ Example Playbook
 
     - hosts: servers
       roles:
-         - { role: Nainterceptor.phpmyadmin }
+         - { role: ansible-role-phpmyadmin }
 
 License
 -------
 
 CC-BY
+Ankur jha
