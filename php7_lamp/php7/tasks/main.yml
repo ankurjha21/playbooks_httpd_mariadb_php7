@@ -1,0 +1,25 @@
+---
+- name: install epel
+  yum: name={{ item }} state=installed
+  with_items:
+    - epel-release
+
+- name: key install
+  rpm_key:
+    key: http://rpms.famillecollet.com/RPM-GPG-KEY-remi
+
+- name: install yum repository
+  yum: name=http://rpms.famillecollet.com/enterprise/remi-release-7.rpm state=installed
+
+- name: install php7
+  yum: name={{ item }} state=installed enablerepo=epel,remi-php70
+  with_items:
+    - php
+    - php-mbstring
+    - php-pear
+    - php-mysqlnd
+    - php-fpm
+    - php-mcrypt
+    - php-xml
+    - php-intl
+    - php-pecl-zip

@@ -1,0 +1,20 @@
+---
+- hosts: localhost
+  become: true
+  vars:
+    mariadb_bind_address: '0.0.0.0'
+    mariadb_root_password: 'root@1234'
+    mariadb_databases:
+      - name: myappdb
+        init_script: /root/lamp/mariadb_lamp/ansible-role-mariadb/init.sql
+      - name: myotherdb
+    mariadb_users:
+      - name: root
+        password: 'root@1234'
+        priv: "myappdb.*:ALL,GRANT"
+        host: "%"
+      - name: otheruser
+        password: 'root@1234'
+        priv: "myotherdb.*:ALL"
+  roles:
+    - ansible-role-mariadb

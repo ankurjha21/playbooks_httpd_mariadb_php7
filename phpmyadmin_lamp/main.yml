@@ -1,0 +1,6 @@
+--- 
+- name: playbooks
+  hosts: localhost
+  sudo: True
+  roles:
+    - phpmyadmin
