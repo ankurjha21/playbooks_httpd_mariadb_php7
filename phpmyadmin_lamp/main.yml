@@ -3,4 +3,4 @@
   hosts: localhost
   sudo: True
   roles:
-    - phpmyadmin
+    - ansible-role-phpmyadmin

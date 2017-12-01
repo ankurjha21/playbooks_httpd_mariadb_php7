@@ -1,0 +1,5 @@
+---
+# defaults file for Nainterceptor.phpmyadmin
+phpmyadmin_servers:
+  - host: localhost
+phpmyadmin_blowfish: 1920896401475714454
